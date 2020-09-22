@@ -21,7 +21,7 @@ public class Exercise8 {
 
 
         System.out.println("Students  : " + students + '\n' + "Teachers  : " + teachers
-                + '\n' + "Capacity : " + capacity + '\n' + '\n' + "Buses required    : " +
+                + '\n' + "Capacity  : " + capacity + '\n' + '\n' + "Buses required      : " +
                 buses + '\n' + "Overflow passengers : " + overflow);
 
 
