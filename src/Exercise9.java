@@ -1,16 +1,13 @@
 import java.util.Scanner;
-//import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 public class Exercise9 {
-   // private static DecimalFormat df = new DecimalFormat("0");
     private static DecimalFormat formatter = new DecimalFormat("#,###");
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Amount:");
+        System.out.print("Amount   : ");
         double amount = in.nextDouble();
-        double originalAmount = amount;
 
         double quarters= Math.floor(amount/0.25);
          amount = amount-(quarters*0.25);
@@ -23,14 +20,11 @@ public class Exercise9 {
 
         double pennies= amount/0.01;
 
-
-        System.out.println("Amount   : " + originalAmount + '\n' + '\n' +
-                "Quarters : " + formatter.format(quarters) + '\n' + "Dimes    : "
+        System.out.println( '\n' +
+                        "Quarters : " + formatter.format(quarters) + '\n' + "Dimes    : "
                 + formatter.format(tenCents) + '\n' + "Nickels  : " + formatter.format(nickels) + '\n'
-                + "Pennies  : " + formatter.format(pennies));
+               + "Pennies  : " + formatter.format(pennies));
 
-      // df.setRoundingMode(RoundingMode.UP);
-       // System.out.println('\n'+ "$" + formatter.format(grossPay));
 
         in.close();
     }

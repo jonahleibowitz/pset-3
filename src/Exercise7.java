@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 public class Exercise7 {
@@ -7,26 +6,19 @@ public class Exercise7 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.print("Salary:");
+        System.out.print("Salary  : ");
         double salary = in.nextDouble();
-        System.out.println("401(k):");
+        System.out.print("401(k)  : ");
         double savingsAccount = in.nextDouble();
-        System.out.println("Federal:");
+        System.out.print("Federal : ");
         double fed = in.nextDouble();
-        System.out.println("State:");
+        System.out.print("State   : ");
         double state = in.nextDouble();
 
-        double pretax = (salary-((salary/100)*savingsAccount)); //deducting the 401(k) before taxes
-
-
-         double yearlyMinusFed = (pretax- ((pretax/100)*fed));
-         double yearlyMinusAllTax= (yearlyMinusFed- ((pretax/100)*state));
-        double payCheck = yearlyMinusAllTax/24;
-
-
-        System.out.println("Salary  : " + salary + '\n' + "401(k)  : " + savingsAccount
-         + '\n' + "Federal : " + fed + '\n' + "State   : " + state);
-
+            double pretax = (salary-((salary/100)*savingsAccount)); //deducting the 401(k) before taxes
+            double yearlyMinusFed = (pretax- ((pretax/100)*fed)); //Subtracting only federal from pretax
+            double yearlyMinusAllTax= (yearlyMinusFed- ((pretax/100)*state)); //Subtracting state from pretax
+            double payCheck = yearlyMinusAllTax/24; //Dividing yearly number for a 2 week pay check
 
 
         System.out.println('\n' + "$" + formatter.format(payCheck) + ".");

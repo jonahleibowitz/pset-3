@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 public class Exercise8 {
@@ -7,11 +6,11 @@ public class Exercise8 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Students:");
+        System.out.print("Students : ");
         double students = in.nextDouble();
-        System.out.println("Teachers:");
+        System.out.print("Teachers : ");
         double teachers = in.nextDouble();
-        System.out.println("Capacity:");
+        System.out.print("Capacity : ");
         double capacity = in.nextDouble();
 
         double totalPeople= students+teachers;
@@ -20,8 +19,7 @@ public class Exercise8 {
 
 
 
-        System.out.println("Students  : " + students + '\n' + "Teachers  : " + teachers
-                + '\n' + "Capacity  : " + capacity + '\n' + '\n' + "Buses required      : " +
+        System.out.println('\n' + "Buses required      : " +
                 formatter.format(buses) + '\n' + "Overflow passengers : " + formatter.format(overflow));
 
 
