@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 public class Exercise10 {
     private static DecimalFormat df = new DecimalFormat("0.00");
-    private static DecimalFormat formatter = new DecimalFormat("#,###.00");
+    private static DecimalFormat formatter = new DecimalFormat("#,##0.00");
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
@@ -14,7 +14,8 @@ public class Exercise10 {
         double celsius= ((fahrenheit-32)*(5/9));
         double kelvin = celsius + 273.15;
 
-        System.out.println("Fahrenheit : " + fahrenheit + '\n' + '\n' + "Celsius    :" + celsius + '\n' + "Kelvin     :" + kelvin);
+        System.out.println("Fahrenheit : " + fahrenheit + '\n' + '\n' + "Celsius    :" + formatter.format(celsius) +
+                '\n' + "Kelvin     :" + formatter.format(kelvin));
 
       //  df.setRoundingMode(RoundingMode.UP);
         //System.out.println('\n'+ formatter.format(totalGrade) +"%");

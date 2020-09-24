@@ -3,7 +3,7 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 public class Exercise8 {
-    private static DecimalFormat formatter = new DecimalFormat("#,###.00");
+    private static DecimalFormat formatter = new DecimalFormat("#,###");
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
@@ -22,7 +22,7 @@ public class Exercise8 {
 
         System.out.println("Students  : " + students + '\n' + "Teachers  : " + teachers
                 + '\n' + "Capacity  : " + capacity + '\n' + '\n' + "Buses required      : " +
-                buses + '\n' + "Overflow passengers : " + overflow);
+                formatter.format(buses) + '\n' + "Overflow passengers : " + formatter.format(overflow));
 
 
         in.close();

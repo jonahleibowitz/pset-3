@@ -14,7 +14,7 @@ public class Exercise4 {
         System.out.println("Height : " + height + '\n' + "Width  : " + width);
         double perimeter= ((height * 2.54)*2) + ((width * 2.54)*2) ;
 
-        System.out.println('\n' + formatter.format(perimeter) + " centimeters");
+        System.out.println('\n' + formatter.format(perimeter) + " centimeters.");
 
 
         in.close();

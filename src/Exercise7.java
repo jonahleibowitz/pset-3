@@ -30,7 +30,7 @@ public class Exercise7 {
 
 
 
-        System.out.println('\n' + "$" + formatter.format(payCheck));
+        System.out.println('\n' + "$" + formatter.format(payCheck) + ".");
 
 
         in.close();

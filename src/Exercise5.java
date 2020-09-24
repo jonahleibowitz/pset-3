@@ -28,7 +28,7 @@ public class Exercise5 {
                 "Quiz 2     :" + quizTwo + '\n' + "Test 1     :" + testOne);
 
         df.setRoundingMode(RoundingMode.UP);
-        System.out.println('\n'+ formatter.format(totalGrade) +"%");
+        System.out.println('\n'+ formatter.format(totalGrade) +"%.");
 
         in.close();
     }

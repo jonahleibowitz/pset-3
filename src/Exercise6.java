@@ -32,7 +32,7 @@ public class Exercise6 {
                 "Saturday  : " + saturday + '\n' + "Sunday    : " + sunday);
 
         df.setRoundingMode(RoundingMode.UP);
-        System.out.println('\n'+ "$" + formatter.format(grossPay));
+        System.out.println('\n'+ "$" + formatter.format(grossPay) + ".");
 
         in.close();
     }

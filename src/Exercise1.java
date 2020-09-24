@@ -1,7 +1,7 @@
 public class Exercise1 {
   public static void main(String[] args) {
-      System.out.println("H E L L O" + System.lineSeparator() + "E       A"+
-              System.lineSeparator() + "L       P" + System.lineSeparator() + "L       C" +
-              System.lineSeparator() + "O A P C S");
+      System.out.println("H E L L O" + '\n' + "E       A"+
+              '\n' + "L       P" + '\n' + "L       C" +
+              '\n' + "O A P C S");
   }
 }
