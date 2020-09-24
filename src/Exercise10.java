@@ -15,8 +15,6 @@ public class Exercise10 {
         System.out.println( '\n' + "Celsius    :" + formatter.format(celsius) +
                 '\n' + "Kelvin     :" + formatter.format(kelvin));
 
-        //System.out.println('\n'+ formatter.format(totalGrade) +"%");
-
         in.close();
     }
 }

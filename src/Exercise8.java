@@ -17,12 +17,6 @@ public class Exercise8 {
         int overflow= (students + teachers) % capacity;
 
 
-      //  double totalPeople= students+teachers;
-      //  double buses = Math.ceil(totalPeople/capacity);
-      //  double overflow = totalPeople - (Math.floor(totalPeople/capacity)*capacity);
-
-
-
         System.out.println('\n' + "Buses required      : " +
                 formatter.format(buses) + '\n' + "Overflow passengers : " + formatter.format(overflow));
 
