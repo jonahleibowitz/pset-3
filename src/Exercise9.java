@@ -7,22 +7,26 @@ public class Exercise9 {
         Scanner in = new Scanner(System.in);
 
         System.out.print("Amount   : ");
-        double amount = in.nextDouble();
+        double amount = 100* in.nextDouble();
 
-        double quarters= Math.floor(amount/0.25);
-         amount = amount-(quarters*0.25);
+        double quarters = amount/25;
+        quarters= (int) quarters;
+        amount = amount % 25;
 
-        double tenCents= Math.floor(amount/0.1);
-            amount = amount - (tenCents * 0.1);
+        double dimes = amount/10;
+        dimes= (int) dimes;
+        amount = amount % 10;
 
-        double nickels= Math.floor(amount/0.05);
-            amount = amount- (nickels* 0.05);
+        double nickels = amount/5;
+        nickels = (int) nickels;
+        amount = amount % 5;
 
-        double pennies= amount/0.01;
+        double pennies= amount;
+        pennies = (int) pennies;
 
         System.out.println( '\n' +
                         "Quarters : " + formatter.format(quarters) + '\n' + "Dimes    : "
-                + formatter.format(tenCents) + '\n' + "Nickels  : " + formatter.format(nickels) + '\n'
+                + formatter.format(dimes) + '\n' + "Nickels  : " + formatter.format(nickels) + '\n'
                + "Pennies  : " + formatter.format(pennies));
 
 

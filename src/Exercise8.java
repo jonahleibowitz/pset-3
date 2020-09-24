@@ -7,15 +7,19 @@ public class Exercise8 {
         Scanner in = new Scanner(System.in);
 
         System.out.print("Students : ");
-        double students = in.nextDouble();
+        int students = in.nextInt();
         System.out.print("Teachers : ");
-        double teachers = in.nextDouble();
+        int teachers = in.nextInt();
         System.out.print("Capacity : ");
-        double capacity = in.nextDouble();
+        int capacity = in.nextInt();
 
-        double totalPeople= students+teachers;
-        double buses = Math.ceil(totalPeople/capacity);
-        double overflow = totalPeople - (Math.floor(totalPeople/capacity)*capacity);
+        double buses= (students + teachers + capacity -1 )/capacity;
+        int overflow= (students + teachers) % capacity;
+
+
+      //  double totalPeople= students+teachers;
+      //  double buses = Math.ceil(totalPeople/capacity);
+      //  double overflow = totalPeople - (Math.floor(totalPeople/capacity)*capacity);
 
 
 
