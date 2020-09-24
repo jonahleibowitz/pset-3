@@ -7,7 +7,7 @@ public class Exercise7 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Salary:");
+        System.out.print("Salary:");
         double salary = in.nextDouble();
         System.out.println("401(k):");
         double savingsAccount = in.nextDouble();
@@ -16,13 +16,12 @@ public class Exercise7 {
         System.out.println("State:");
         double state = in.nextDouble();
 
-        double gross = (salary-((salary/100)*savingsAccount));
+        double pretax = (salary-((salary/100)*savingsAccount)); //deducting the 401(k) before taxes
 
 
-        double netPayFed = (gross- ((gross/100)* fed+state));
-        double netPayState = netPayFed- ((netPayFed/100)* state);
-        double payCheck = netPayState/24;
-       // double payCheck= (netPayState-((netPayState/100)*fed))/24;
+         double yearlyMinusFed = (pretax- ((pretax/100)*fed));
+         double yearlyMinusAllTax= (yearlyMinusFed- ((pretax/100)*state));
+        double payCheck = yearlyMinusAllTax/24;
 
 
         System.out.println("Salary  : " + salary + '\n' + "401(k)  : " + savingsAccount
